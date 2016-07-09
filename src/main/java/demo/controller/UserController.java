@@ -1,6 +1,8 @@
 package demo.controller;
 
 import demo.model.User;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,10 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("user")
 public class UserController {
 
+    @Autowired
+    private SqlSession sqlSession;
+
     @RequestMapping("create")
     private String create(User user) {
-        System.out.println("UserController create method...");
-        System.out.println(user);
+        sqlSession.insert("user.create", user);
         return "/index.jsp";
     }
 }
