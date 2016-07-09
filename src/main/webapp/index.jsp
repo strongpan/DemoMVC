@@ -11,6 +11,6 @@
     <input type="password" name="password" placeholder="PASSWORD"><br>
     <input type="submit" value="LOGIN">
 </form>
-<a href="register.jsp">REGISTER</a>
+<a href="/register.jsp">REGISTER</a>
 </body>
 </html>
