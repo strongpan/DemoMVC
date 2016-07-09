@@ -11,6 +11,8 @@
     <input type="password" name="password" placeholder="PASSWORD"><br>
     <input type="submit" value="LOGIN">
 </form>
+${requestScope.message}
+<hr>
 <a href="/register.jsp">REGISTER</a>
 </body>
 </html>
