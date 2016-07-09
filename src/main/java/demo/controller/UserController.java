@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 16-7-9 上午11:18.
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("user")
 public class UserController {
 
-    @RequestMapping("/create")
-    private void create(User user) {
+    @RequestMapping("create")
+    private String create(User user) {
         System.out.println("UserController create method...");
         System.out.println(user);
+        return "/index.jsp";
     }
 }
