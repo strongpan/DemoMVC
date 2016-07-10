@@ -5,7 +5,7 @@
 <head>
     <title>home page</title>
     <script>
-        function remove() {
+        function del() {
             return confirm("DEL?");
         }
     </script>
@@ -48,7 +48,7 @@ ${sessionScope.user.username}
             <td>${book.price}</td>
             <td>${book.amount}</td>
             <td><a href="/book/queryOne/${book.id}">EDIT</a></td>
-            <td><a href="/book/remove/${book.id}" onclick="return remove()">REMOVE</a></td>
+            <td><a href="/book/remove/${book.id}" onclick="return del()">REMOVE</a></td>
         </tr>
     </c:forEach>
 </table>
