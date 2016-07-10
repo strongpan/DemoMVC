@@ -29,11 +29,11 @@ public class UserController extends BaseController {
     private String login(User user) {
         List<User> users = sqlSession.selectList("user.login", user);
         if (users.size() > 0) {
-            session.setAttribute("user", user);
+            session.setAttribute("user", users.get(0));
             return "redirect:/home.jsp";
         } else {
             request.setAttribute("message", "invalid username or password.");
-            return "/index.jsp";
+            return "index";
         }
     }
 

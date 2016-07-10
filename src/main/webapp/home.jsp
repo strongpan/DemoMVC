@@ -11,6 +11,8 @@
 </c:if>
 <h1>home page</h1>
 ${sessionScope.user.username}
+${sessionScope.user.password}
+${sessionScope.user.id}
 <hr>
 <a href="/user/logout">LOG OUT</a>
 </body>
