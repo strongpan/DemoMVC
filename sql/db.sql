@@ -22,3 +22,6 @@ CREATE TABLE test.book (
 
 SELECT *
 FROM test.user;
+
+SELECT *
+FROM test.book;

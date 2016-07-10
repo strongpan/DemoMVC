@@ -30,7 +30,7 @@ public class UserController extends BaseController {
         List<User> users = sqlSession.selectList("user.login", user);
         if (users.size() > 0) {
             session.setAttribute("user", users.get(0));
-            return "redirect:/home.jsp";
+            return "redirect:/book/queryAll";
         } else {
             request.setAttribute("message", "invalid username or password.");
             return "index";
